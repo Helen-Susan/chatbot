@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swadhunavil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #eceff1);
+      overflow-x: hidden;
+    }
+    .page {
+      display: none;
+      height: 100vh;
+      width: 100vw;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .active {
+      display: flex;
+    }
+    .landing {
+      background: url('https://www.vegrecipesofindia.com/wp-content/uploads/2023/11/indian-party-snacks-starters.jpg') no-repeat center center/cover;
+      animation: animeIn 5s backwards;
+    }
+    .landing h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      color: white;
+      text-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+    .enter-btn {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      background: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+    .enter-btn:hover {
+      background: #f1f1f1;
+    }
+    .menu-section {
+      padding: 2rem;
+      width: 100%;
+      text-align: center;
+    }
+    .menu-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .menu-card {
+      position: relative;
+      width: 250px;
+      height: 300px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .menu-card:hover {
+      transform: scale(1.03);
+    }
+    .card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .card-text {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 0.75rem;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #607d8b;
+      font-size: 0.9rem;
+    }
+    df-messenger {
+      --df-messenger-button-titlebar-color: #607d8b;
+      --df-messenger-chat-background-color: #eceff1;
+      --df-messenger-font-color: #263238;
+      --df-messenger-user-message: #cfd8dc;
+      --df-messenger-bot-message: #e0f2f1;
+    }
+    @keyframes animeIn {
+      from {
+        filter: hue-rotate(0deg);
+      }
+      to {
+        filter: hue-rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page landing active" id="page1">
+    <h1>Swadhunavil</h1>
+    <button class="enter-btn" onclick="goToMenu()">Welcome</button>
+  </div>
+
+  <div class="page" id="page2">
+    <section class="menu-section">
+      <h2>Our Menu</h2>
+      <div class="menu-items">
+        <div class="menu-card">
+          <img src="https://media.istockphoto.com/id/1162934034/photo/spicy-pav-bhaji-masala-filled-between-the-buttered-slider-buns.jpg?s=612x612&w=0&k=20&c=skwtHcdEw9XUrP_BBQ4MCUcJBgMPYtAOIyKd8OlSERg=" alt="Pav Bhaji" class="card-img" />
+          <div class="card-text">Pav Bhaji</div>
+        </div>
+        <div class="menu-card">
+          <img src="https://media.istockphoto.com/id/873539518/photo/deep-fried-bread-spicy-chickpeas-curry-and-salad.jpg?s=612x612&w=0&k=20&c=S3YF4G2hCVQCccnjC0Q_Q4RXmR2vQmzDOcvdVwOjgLU=" alt="Chole Bhature" class="card-img" />
+          <div class="card-text">Chole Bhature</div>
+        </div>
+        <div class="menu-card">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1381&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pizza" class="card-img" />
+          <div class="card-text">Pizza</div>
+        </div>
+        <div class="menu-card">
+          <img src="https://media.istockphoto.com/id/953718476/photo/mango-lassi-or-smoothie-in-big-glasses-with-curd-cut-fruit-pieces-and-blender.jpg?s=612x612&w=0&k=20&c=bayxlvHBvJt1bZmRFdUcx83GKhFez3AsMMJJS2-T4Zk=" alt="Mango Lassi" class="card-img" />
+          <div class="card-text">Mango Lassi</div>
+        </div>
+        <div class="menu-card">
+          <img src="https://media.istockphoto.com/id/2196568886/photo/homemade-king-fish-biryani.jpg?s=612x612&w=0&k=20&c=AyDYEyx7Po8EMRpHdUs4mxCfokY-ek9tN7bMHGcBewA=" alt="Biriyani" class="card-img" />
+          <div class="card-text">Biriyani</div>
+        </div>
+        <div class="menu-card">
+          <img src="https://media.istockphoto.com/id/1295331275/photo/batata-vada-popular-street-food-of-india-served-with-green-chutney.jpg?s=612x612&w=0&k=20&c=QbpYVeZep_KURT3RqpzBTRshK_s6Mu5gYddqT_3zB68=" alt="Vada Pav" class="card-img" />
+          <div class="card-text">Vada Pav</div>
+        </div>
+        <div class="menu-card">
+          <img src="https://media.istockphoto.com/id/525787321/photo/masala-dosa-dosa-south-indian-snack-india.jpg?s=612x612&w=0&k=20&c=d0eKK0kiQsdTUkDQC1UDtkftgjPZeJkeXxFJy3HqOso=" alt="Rava Dosa" class="card-img" />
+          <div class="card-text">Rava Dosa</div>
+        </div>
+        <div class="menu-card">
+          <img src="https://media.istockphoto.com/id/1293390023/photo/keema-samosa-with-fresh-mint-dipping-sauce-indian-food.jpg?s=612x612&w=0&k=20&c=C_RE-CAoGht_rxXLyuxFyfrY90GOSnvegrqSZ9JwzZE=" alt="Samosa" class="card-img" />
+          <div class="card-text">Samosa</div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      &copy; 2025 Swadhunavil. All rights reserved.
+    </footer>
+   
+    <df-messenger
+      intent="WELCOME"
+      chat-title="swadhusahayii"
+      agent-id="5ff026cb-a297-4707-b3be-5b5cf1da657f"
+      language-code="en"
+    ></df-messenger>
+  </div>
+
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <script>
+    function goToMenu() {
+      document.getElementById('page1').classList.remove('active');
+      document.getElementById('page2').classList.add('active');
+    }
+  </script>
+</body>
+</html>
